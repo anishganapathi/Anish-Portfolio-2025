@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <div className="h-screen w-full relative flex flex-col items-start justify-center overflow-hidden px-4 sm:px-8 md:px-12 lg:px-16">
-      <div className="relative z-10 max-w-[800px]">
+      <div className="top-6 relative z-10 max-w-[800px]">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
           Hey - I'm
         </h1>
