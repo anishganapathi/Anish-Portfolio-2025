@@ -1,7 +1,7 @@
 import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import AboutScroll from "@/components/AboutScroll";
-import BentoProject from "@/components/BentoProject";
+import ProjectsSection from "@/components/ProjectCard";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <AboutScroll />
-      <BentoProject />
+      <ProjectsSection />
     </div>
   );
 }
