@@ -79,7 +79,7 @@ const Nav: React.FC = () => {
                 height={32}
                 className="object-contain bg-black/20 backdrop-blur-sm rounded-2xl p-1 border border-white/[0.08]"
               />
-              <span className={`${sora.className} font-semibold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/70 hover:to-white transition-all duration-300`}>Anish</span>
+              <span className={`${sora.className} font-semibold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white transition-all duration-300`}>Anish</span>
             </Link>
           </motion.div>
 
