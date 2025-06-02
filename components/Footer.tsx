@@ -9,7 +9,7 @@ const sora = Sora({ subsets: ['latin'] });
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-white/[0.08] bg-black">
+    <footer className="w-full border-t border-white/[0.08] bg-black mt-20">
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           {/* Logo and Name */}
