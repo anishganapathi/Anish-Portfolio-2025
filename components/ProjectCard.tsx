@@ -36,7 +36,7 @@ const ProjectsSection = () => {
       title: "Traviz",
       description: " A crowd detection using image processing techniques by implementing AI algorithms for reducing costs and delay in trasportation. TRAVIZ predicts and suggests the optimal cost- effective travel plans for travelling from point A to B using public transportation. ",
       imageUrl: "/Traviz.png",
-      link: "https://github.com/Team-NEXT-INDIA/Traviz"
+      link: "github.com/Team-NEXT-INDIA/Traviz"
     },
     {
       title: "Aceternity UI",
