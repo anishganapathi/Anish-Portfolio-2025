@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { PinContainer } from './ui/3d-pin';
-import { DM_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const dmSans = DM_Sans({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 interface ProjectCardProps {
   title: string;
@@ -54,7 +54,7 @@ const ProjectsSection = () => {
 
   return (
     <section className="py-20">
-      <h2 className={`${dmSans.className} text-xl md:text-3xl font-semibold text-white text-center mb-16`}>-- MY PROJECTS --</h2>
+      <h2 className={`${inter.className} text-xl md:text-3xl font-bold text-white text-center mb-16`}>MY PROJECTS</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-7xl mx-auto px-4">
         {projects.map((project, index) => (
           <div key={index} className={`${index >= 3 ? 'lg:col-span-1.5 lg:col-start-2' : ''} flex justify-center`}>

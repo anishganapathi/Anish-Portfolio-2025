@@ -1,45 +1,82 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { BackgroundBeams } from './ui/background-beams';
+import { SplineScene } from "@/components/ui/splite";
+import { Card } from "@/components/ui/card";
+import { Spotlight } from "@/components/ui/spotlight";
+import BlurText from "@/components/ui/heroblurtext";
 import Link from 'next/link';
+import { Inter } from 'next/font/google';
+import { motion } from "framer-motion";
 
-const Hero = () => {
+const inter = Inter({ subsets: ['latin'] });
+
+export function Hero() {
   return (
-    <div className="h-screen w-full relative flex flex-col items-start justify-center overflow-hidden px-4 sm:px-6 md:px-12 lg:px-16">
-      <div className="relative z-10 max-w-[800px] mx-auto sm:mx-0">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 sm:mb-4">
-          Hey - I&apos;m
-        </h1>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#8F8F8F] mb-4 sm:mb-8">
-          Anish Ganapathi
-        </h2>
-        <p className="text-base sm:text-lg md:text-xl text-[#8F8F8F] max-w-3xl mb-4 sm:mb-8 leading-relaxed">
-          I&apos;m a Computer Science grad student at Stevens Institute of Technology who loves to design, develop, and build things that make a difference. With a background in full-stack development and UI design, I enjoy creating clean, user-friendly experiences that look as good as they work. Lately, I&apos;ve been exploring how AI and machine learning can take those experiences even further. I&apos;m all about turning ideas into beautiful, functional products.
-        </p>
-        <p className="text-white text-base sm:text-lg md:text-xl mb-6 sm:mb-8">
-          Know more about me --)
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link href="/contact" className="w-full sm:w-auto">
-            <button className="w-full sm:w-auto px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-gray-100 transition-colors hover:cursor-pointer">
-              Contact
-            </button>
-          </Link>
-          <Link href="/resume" className="w-full sm:w-auto">
-            <button className="w-full sm:w-auto px-8 py-3 rounded-full bg-[#1C1C1C] text-white font-medium border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors hover:cursor-pointer">
-              Resume
-            </button>
-          </Link>
+    <Card className="w-full h-screen bg-black/[0.96] relative overflow-hidden border-0">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+      />
+      
+      <div className="flex h-full">
+        {/* Left content */}
+        <div className="flex-1 p-8 md:p-16 relative z-10 flex flex-col justify-center">
+          <div className="flex flex-col">
+            <div className="mt-2">
+              <BlurText 
+                text="I'm Anish Ganapathi"
+                className={`${inter.className} text-[60px] md:text-[80px] lg:text-[100px] font-bold text-white leading-[0.9] tracking-tighter`}
+                delay={200}
+                direction="bottom"
+                animateBy="words"
+              />
+            </div>
+          </div>
+
+          <div className="mt-8 max-w-2xl">
+            <BlurText 
+              text="I'm a Computer Science grad student at Stevens Institute of Technology who loves to design, develop, and build things that make a difference."
+              className={`${inter.className} text-xl md:text-2xl text-[#666666] leading-relaxed`}
+              delay={100}
+              direction="bottom"
+              animateBy="words"
+            />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+            >
+              <Link href="/contact" className="w-full sm:w-auto">
+                <button className={`${inter.className} w-full sm:w-auto px-10 py-3 text-base rounded-full bg-white text-black font-medium hover:bg-gray-100 transition-colors hover:cursor-pointer`}>
+                  Contact
+                </button>
+              </Link>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.4, duration: 0.5 }}
+            >
+              <Link href="/resume" className="w-full sm:w-auto">
+                <button className={`${inter.className} w-full sm:w-auto px-10 py-3 text-base rounded-full bg-[#1C1C1C] text-white font-medium border border-[#2A2A2A] hover:bg-[#2A2A2A] transition-colors hover:cursor-pointer`}>
+                  Resume
+                </button>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Right content */}
+        <div className="flex-1 relative">
+          <SplineScene 
+            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+            className="w-full h-full"
+          />
         </div>
       </div>
-      
-      {/* Background animation with negative z-index */}
-      <div className="absolute inset-0" style={{ zIndex: -1 }}>
-        <BackgroundBeams />
-      </div>
-    </div>
-  );
-};
-
-export default Hero;
+    </Card>
+  )
+}
