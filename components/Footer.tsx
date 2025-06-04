@@ -3,9 +3,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Sora } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const sora = Sora({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 const Footer = () => {
   return (
@@ -21,12 +21,12 @@ const Footer = () => {
               height={32}
               className="object-contain bg-black/20 backdrop-blur-sm rounded-2xl p-1 border border-white/[0.08]"
             />
-            <span className={`${sora.className} font-semibold tracking-wider text-white`}>Anish</span>
+            <span className={`${inter.className} font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white transition-all duration-300`}>Anish</span>
           </div>
 
           {/* Copyright */}
           <p className="text-[#8F8F8F] text-sm">
-            Copyright 2025© Anish Ganapathi
+            Copyright 2025 © Anish Ganapathi
           </p>
 
           {/* Social Links */}

@@ -36,19 +36,19 @@ const ProjectsSection = () => {
       title: "Traviz",
       description: " A crowd detection using image processing techniques by implementing AI algorithms for reducing costs and delay in trasportation. TRAVIZ predicts and suggests the optimal cost- effective travel plans for travelling from point A to B using public transportation. ",
       imageUrl: "/Traviz.png",
-      link: "github.com/Team-NEXT-INDIA/Traviz"
+      link: "https://github.com/Team-NEXT-INDIA/Traviz"
     },
     {
-      title: "Aceternity UI",
-      description: "Customizable Tailwind CSS and Framer Motion Components.",
-      imageUrl: "/MyAbout.jpg",
-      link: "ui.aceternity.com"
+      title: "Skin Cancer Detection",
+      description: "A Skin cancer detection system using CNN implemented in MATLAB, which classifies skin cancer images into malignant and benign categories and further grade them into early, intermediate, and advanced stages.",
+      imageUrl: "/Skin.jpg",
+      link: "https://github.com/anishganapathi/Skin-Disease-Diagnosis"
     },
     {
-      title: "Aceternity UI",
-      description: "Customizable Tailwind CSS and Framer Motion Components.",
-      imageUrl: "/MyAbout.jpg",
-      link: "ui.aceternity.com"
+      title: "Vitopia - Website(2024)",
+      description: "VITopia 2024 is an annual international cultural and sports festival. It's a large-scale event where students from across the nation converge for two days of performances, competitions, and interactive activities.",
+      imageUrl: "/Vitopia.png",
+      link: "https://github.com/Team-NEXT-INDIA/Vitopia-2024-Next"
     },
   ];
 
