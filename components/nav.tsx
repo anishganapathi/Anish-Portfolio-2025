@@ -5,11 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Inter } from 'next/font/google';
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
 const Nav: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const menuVariants = {
     closed: {
@@ -50,9 +52,9 @@ const Nav: React.FC = () => {
   };
 
   const navItems = [
-    { href: "/blog", label: "Home" },
-    { href: "/forum", label: "About" },
-    { href: "/careers", label: "Projects" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
   ];
 
   return (
@@ -79,7 +81,7 @@ const Nav: React.FC = () => {
                 height={32}
                 className="object-contain bg-black/20 backdrop-blur-sm rounded-2xl p-1 border border-white/[0.08]"
               />
-              <span className={`${inter.className} font-bold  tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white transition-all duration-300`}>Anish</span>
+              <span className={`${inter.className} font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white transition-all duration-300`}>Anish</span>
             </Link>
           </motion.div>
 
@@ -98,7 +100,7 @@ const Nav: React.FC = () => {
                     className={`${inter.className} text-white/70 hover:text-white px-4 py-2 text-[15px] font-medium transition-colors relative group`}
                   >
                     {item.label}
-                    <span className="absolute inset-x-0 -bottom-1 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                    <span className={`absolute inset-x-0 -bottom-1 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-300 ${pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
                   </Link>
                 </motion.div>
               ))}
@@ -113,7 +115,7 @@ const Nav: React.FC = () => {
             className="flex items-center gap-4"
           >
             <Link href="/contact">
-              <button className={`${inter.className} hidden md:flex items-center justify-center rounded-full bg-white/[0.05] border border-white/[0.08] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#2A2A2A] transition-colors hover:cursor-pointer`}>
+              <button className={`${inter.className} hidden md:flex items-center justify-center rounded-full ${pathname === '/contact' ? 'bg-[#2A2A2A]' : 'bg-white/[0.05]'} border border-white/[0.08] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#2A2A2A] transition-colors hover:cursor-pointer`}>
                 Contact
               </button>
             </Link>
@@ -185,7 +187,7 @@ const Nav: React.FC = () => {
                   >
                     <Link
                       href={item.href}
-                      className={`${inter.className} text-white hover:text-white/80 px-4 py-2 text-[15px] font-medium transition-colors rounded-lg hover:bg-white/5 block`}
+                      className={`${inter.className} ${pathname === item.href ? 'text-white bg-white/5' : 'text-white/70'} hover:text-white px-4 py-2 text-[15px] font-medium transition-colors rounded-lg hover:bg-white/5 block`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
@@ -200,7 +202,7 @@ const Nav: React.FC = () => {
                     href="/contact"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <button className={`${inter.className} w-full flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black hover:bg-gray-100 transition-colors hover:cursor-pointer`}>
+                    <button className={`${inter.className} w-full flex items-center justify-center rounded-full ${pathname === '/contact' ? 'bg-gray-100 text-black' : 'bg-white text-black'} px-6 py-2.5 text-sm font-semibold hover:bg-gray-100 transition-colors hover:cursor-pointer`}>
                       Contact
                     </button>
                   </Link>
