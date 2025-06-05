@@ -14,8 +14,8 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, description, imageUrl, link }: ProjectCardProps) => {
   return (
     <PinContainer title={link} href={link}>
-      <div className="flex flex-col w-[20rem] h-[25rem] bg-[#000000] rounded-xl p-4">
-        <div className="relative w-full h-48 mb-4">
+      <div className="flex flex-col w-[280px] sm:w-[320px] lg:w-[20rem] h-auto sm:h-[25rem] bg-[#000000] rounded-xl p-4">
+        <div className="relative w-full h-36 sm:h-48 mb-4">
           <Image
             src={imageUrl}
             alt={title}
@@ -23,8 +23,8 @@ const ProjectCard = ({ title, description, imageUrl, link }: ProjectCardProps) =
             className="rounded-lg object-cover"
           />
         </div>
-        <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-        <p className="text-[#8F8F8F] text-sm">{description}</p>
+        <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{title}</h3>
+        <p className="text-[#8F8F8F] text-xs sm:text-sm line-clamp-6 sm:line-clamp-none">{description}</p>
       </div>
     </PinContainer>
   );
@@ -34,7 +34,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Traviz",
-      description: " A crowd detection using image processing techniques by implementing AI algorithms for reducing costs and delay in trasportation. TRAVIZ predicts and suggests the optimal cost- effective travel plans for travelling from point A to B using public transportation. ",
+      description: "A crowd detection using image processing techniques by implementing AI algorithms for reducing costs and delay in transportation. TRAVIZ predicts and suggests the optimal cost-effective travel plans for travelling from point A to B using public transportation.",
       imageUrl: "/Traviz.png",
       link: "https://github.com/Team-NEXT-INDIA/Traviz"
     },
@@ -53,11 +53,13 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="py-20">
-      <h2 className={`${inter.className} text-xl md:text-3xl font-bold text-white text-center mb-16`}>MY PROJECTS</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-7xl mx-auto px-4">
+    <section className="py-12 sm:py-20">
+      <h2 className={`${inter.className} text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8 sm:mb-16`}>
+        MY PROJECTS
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 sm:gap-y-16 gap-x-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {projects.map((project, index) => (
-          <div key={index} className={`${index >= 3 ? 'lg:col-span-1.5 lg:col-start-2' : ''} flex justify-center`}>
+          <div key={index} className="flex justify-center">
             <ProjectCard {...project} />
           </div>
         ))}

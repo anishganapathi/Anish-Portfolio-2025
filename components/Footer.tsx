@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="w-full border-t border-white/[0.08] bg-black mt-20">
       <div className="max-w-7xl mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-center sm:items-center sm:justify-between space-y-6 sm:space-y-0">
           {/* Logo and Name */}
           <div className="flex items-center gap-3">
             <Image 
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="text-[#8F8F8F] text-sm">
+          <p className="text-[#8F8F8F] text-sm text-center sm:text-left">
             Copyright 2025 © Anish Ganapathi
           </p>
 
