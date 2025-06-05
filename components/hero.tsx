@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <div className="w-full h-screen relative">
       <Spotlight className="absolute inset-0" />
-      <Card className="w-full h-full bg-black/[0.96] relative overflow-hidden border-0">
+      <Card className="w-full h-full bg-[#0a0a0a] relative overflow-hidden border-0">
         <div className="flex flex-col lg:flex-row h-full relative z-20">
           {/* Left content */}
           <div className="flex-1 px-6 pt-20 pb-8 sm:p-8 md:p-12 lg:p-16 relative flex flex-col justify-center">
