@@ -64,7 +64,7 @@ export function Hero() {
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto"
               >
-                <Link href="/resume" className="block w-full">
+                <Link href="/#" className="block w-full">
                   <button className={`${inter.className} w-full sm:w-[180px] px-6 sm:px-8 py-3.5 sm:py-4 text-base rounded-full bg-[#1C1C1C] text-white font-medium border border-[#2A2A2A] hover:bg-[#2A2A2A] hover:border-white/20 transition-all duration-300 hover:-translate-y-0.5 hover:cursor-pointer`}>
                     Resume
                   </button>

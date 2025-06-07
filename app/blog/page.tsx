@@ -10,71 +10,46 @@ import { X } from "lucide-react";
 const demoData = {
   tagline: "LATEST BLOG POSTS",
   heading: "Blog Posts",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.",
   posts: [
     {
       id: "post-1",
-      title: "Build websites in minutes with shadcn/ui",
+      title: "Initial stages of Development and Design.",
       summary:
-        "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
+        "When I first started working with Next.js, I was pretty much diving into uncharted waters. I leaned heavily on YouTube tutorials, and thankfully, a few really solid ones helped me get through the initial learning curve.",
       content: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-        • Key Feature 1: Lorem ipsum dolor sit amet
-        • Key Feature 2: Consectetur adipiscing elit
-        • Key Feature 3: Sed do eiusmod tempor
-
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        When I first started working with Next.js, I leaned heavily on YouTube tutorials, and thankfully, a friend of mine helped me get through the initial learning curve. At the same time, I was trying to style everything with Tailwind CSS , which felt a bit chaotic at first trying to remember all those utility classes was no joke! But with time and practice, it started to click. 
+        In parallel,  was also designing the UI for a mobile app. I spent hours studying mockups, pulling inspiration from Dribbble, and trying to faithfully recreate the aesthetic in my own designs. That process really helped me develop a sharper eye for design and taught me the value of prototyping and wireframing. Looking back, that blend of building and designing turned out to be one of the most rewarding parts of the project.
       `,
-      label: "Tutorial",
-      author: "Jane Doe",
-      published: "1 Jan 2024",
-      image: "https://www.shadcnblocks.com/images/block/placeholder-dark-1.svg",
+      label: "VITOPIA",
+      author: "Anish",
+      published: "25 Feb 2024",
+      image: "/Vitopia.png",
     },
     {
       id: "post-2",
-      title: "Easily copy code to build your website",
+      title: "MATLAB and GUI based application",
       summary:
-        "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
+        "While exploring image classification for skin lesions trying to tell apart benign from malignant cases using CNNs, I quickly realized that getting everything to work smoothly inside MATLAB’s interface wasn’t going to be easy.",
       content: `
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
-        
-        Et quasi architecto beatae vitae dicta sunt explicabo:
-
-        1. First step: Configure your development environment
-        2. Second step: Install necessary dependencies
-        3. Third step: Start building your components
-        
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        While exploring image classification for skin lesions trying to tell apart benign from malignant cases using CNNs, I quickly realized that getting everything to work smoothly inside MATLAB’s interface wasn’t going to be easy. Training the models was one part of the puzzle; making the results accessible and interactive in MATLAB was a whole different challenge. I tried out several pre-trained models like GoogLeNet, AlexNet, and VGG, experimenting with different configurations to see what worked best. Each model brought its own surprises, and after a lot of trial and error, I finally got some results I was happy with. The whole experience taught me a lot not just about deep learning and transfer learning, but also about the importance of making complex models usable for others through a clean, intuitive interface.
       `,
-      label: "Guide",
-      author: "Jane Doe",
-      published: "1 Jan 2024",
-      image: "https://www.shadcnblocks.com/images/block/placeholder-dark-1.svg",
+      label: "SKIN DISEASE DIAGNOSIS",
+      author: "Anish",
+      published: "11 Dec 2024",
+      image: "Skin.jpg",
     },
     {
       id: "post-3",
-      title: "The future of web design",
+      title: "Testing and Production",
       summary:
-        "Pellentesque eget quam ligula. Sed felis ante, consequat nec ultrices ut, ornare quis metus. Vivamus sit amet tortor vel enim sollicitudin hendrerit.",
+        "Working on this project with my teammates was genuinely exciting there was this great sense of collaboration, with everyone contributing their part to bring the idea to life.",
       content: `
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
-        
-        Future Trends:
-        • AI-Powered Design Tools
-        • Micro-Interactions
-        • Dark Mode by Default
-        • Voice User Interfaces
-        
-        Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.
+       Working on this project with my teammates was genuinely exciting there was this great sense of collaboration, with everyone contributing their part to bring the idea to life. But when it came time to test the application, things got a bit tricky. We had to physically carry around the device, which included a WiFi module and a camera, making the whole process a bit cumbersome. On top of that, the communication between the app and the device via the server wasn’t always consistent sometimes it worked perfectly, and other times it was frustratingly unreliable. Despite these challenges, seeing the app finally come together and perform as intended made it all worth it. The final output turned out to be something we were really proud of.
       `,
-      label: "Trends",
-      author: "Jane Doe",
-      published: "1 Jan 2024",
-      image: "https://www.shadcnblocks.com/images/block/placeholder-dark-1.svg",
+      label: "TRAVIZ",
+      author: "Anish",
+      published: "19 May 2025",
+      image: "Traviz.png",
     },
   ],
 };
@@ -198,7 +173,6 @@ export default function BlogPage() {
             {demoData.tagline}
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">{demoData.heading}</h1>
-          <p className="text-white/70 max-w-2xl mx-auto">{demoData.description}</p>
         </motion.div>
 
         <AnimatePresence>
