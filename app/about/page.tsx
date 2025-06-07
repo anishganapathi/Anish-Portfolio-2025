@@ -107,7 +107,7 @@ export default function AboutPage() {
             Developed few projects during my bachelors.
           </p>
           <ul className="list-inside space-y-2 text-neutral-700 dark:text-neutral-300">
-            <li>✅ Developed Skin cancer pprediction analysis as a capstone project.</li>
+            <li>✅ Developed Skin cancer prediction analysis as a capstone project.</li>
             <li>✅ Completed an internship on cybersecurity (Cranes Varsity).</li>
             <li>✅ Built a website on a fashion brand.</li>
             <li>✅ Designed a User Interface for a mobile application about Tiger Reserve.</li>
