@@ -75,7 +75,7 @@ const contacts: Contact[] = [
     name: "My Projects",
     location: "Github",
     type: "company",
-    href: "https://maps.google.com/?q=Guatemala+City",
+    href: "https://github.com/anishganapathi",
   },
   {
     name: "Skin Disease Diagnosis",

@@ -6,6 +6,9 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
+import { Syne } from 'next/font/google';
+
+const syne = Syne({ subsets: ['latin'] });
 
 const demoData = {
   tagline: "LATEST BLOG POSTS",
@@ -29,9 +32,9 @@ const demoData = {
       id: "post-2",
       title: "MATLAB and GUI based application",
       summary:
-        "While exploring image classification for skin lesions trying to tell apart benign from malignant cases using CNNs, I quickly realized that getting everything to work smoothly inside MATLAB’s interface wasn’t going to be easy.",
+        "While exploring image classification for skin lesions trying to tell apart benign from malignant cases using CNNs, I quickly realized that getting everything to work smoothly inside MATLAB's interface wasn't going to be easy.",
       content: `
-        While exploring image classification for skin lesions trying to tell apart benign from malignant cases using CNNs, I quickly realized that getting everything to work smoothly inside MATLAB’s interface wasn’t going to be easy. Training the models was one part of the puzzle; making the results accessible and interactive in MATLAB was a whole different challenge. I tried out several pre-trained models like GoogLeNet, AlexNet, and VGG, experimenting with different configurations to see what worked best. Each model brought its own surprises, and after a lot of trial and error, I finally got some results I was happy with. The whole experience taught me a lot not just about deep learning and transfer learning, but also about the importance of making complex models usable for others through a clean, intuitive interface.
+        While exploring image classification for skin lesions trying to tell apart benign from malignant cases using CNNs, I quickly realized that getting everything to work smoothly inside MATLAB's interface wasn't going to be easy. Training the models was one part of the puzzle; making the results accessible and interactive in MATLAB was a whole different challenge. I tried out several pre-trained models like GoogLeNet, AlexNet, and VGG, experimenting with different configurations to see what worked best. Each model brought its own surprises, and after a lot of trial and error, I finally got some results I was happy with. The whole experience taught me a lot not just about deep learning and transfer learning, but also about the importance of making complex models usable for others through a clean, intuitive interface.
       `,
       label: "SKIN DISEASE DIAGNOSIS",
       author: "Anish",
@@ -44,7 +47,7 @@ const demoData = {
       summary:
         "Working on this project with my teammates was genuinely exciting there was this great sense of collaboration, with everyone contributing their part to bring the idea to life.",
       content: `
-       Working on this project with my teammates was genuinely exciting there was this great sense of collaboration, with everyone contributing their part to bring the idea to life. But when it came time to test the application, things got a bit tricky. We had to physically carry around the device, which included a WiFi module and a camera, making the whole process a bit cumbersome. On top of that, the communication between the app and the device via the server wasn’t always consistent sometimes it worked perfectly, and other times it was frustratingly unreliable. Despite these challenges, seeing the app finally come together and perform as intended made it all worth it. The final output turned out to be something we were really proud of.
+       Working on this project with my teammates was genuinely exciting there was this great sense of collaboration, with everyone contributing their part to bring the idea to life. But when it came time to test the application, things got a bit tricky. We had to physically carry around the device, which included a WiFi module and a camera, making the whole process a bit cumbersome. On top of that, the communication between the app and the device via the server wasn't always consistent sometimes it worked perfectly, and other times it was frustratingly unreliable. Despite these challenges, seeing the app finally come together and perform as intended made it all worth it. The final output turned out to be something we were really proud of.
       `,
       label: "TRAVIZ",
       author: "Anish",
@@ -172,7 +175,7 @@ export default function BlogPage() {
           <Badge variant="secondary" className="mb-6">
             {demoData.tagline}
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">{demoData.heading}</h1>
+          <h1 className={`${syne.className} text-4xl md:text-5xl font-bold text-white mb-8`}>{demoData.heading}</h1>
         </motion.div>
 
         <AnimatePresence>
