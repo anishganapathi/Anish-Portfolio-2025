@@ -4,10 +4,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Inter } from 'next/font/google';
+import { Inter, Syne, Outfit } from 'next/font/google';
 import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
+const syne = Syne({ subsets: ['latin'] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 const Nav: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,15 +75,17 @@ const Nav: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.3 }}
             className="flex items-center"
           >
-            <Link href="/" className="text-white/90 font-semibold text-xl flex items-center gap-3 transition-colors hover:text-white">
+            <Link href="/" className="text-white/90 font-semibold flex items-center gap-2 transition-colors hover:text-white">
               <Image 
                 src="/Alogo.png" 
                 alt="Logo" 
-                width={32} 
-                height={32}
-                className="object-contain bg-black/20 backdrop-blur-sm rounded-2xl p-1 border border-white/[0.08]"
+                width={28} 
+                height={28}
+                className="object-contain bg-black/20 backdrop-blur-sm rounded-xl p-1 border border-white/[0.08]"
               />
-              <span className={`${inter.className} font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white transition-all duration-300`}>Anish</span>
+              <span className={`${syne.className} text-lg font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/80 transition-all duration-300 uppercase`}>
+                Anish
+              </span>
             </Link>
           </motion.div>
 

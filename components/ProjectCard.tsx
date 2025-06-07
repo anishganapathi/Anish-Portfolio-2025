@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { PinContainer } from './ui/3d-pin';
-import { Inter } from 'next/font/google';
+import { Inter, Syne } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
+const syne = Syne({ subsets: ['latin'] });
 
 interface ProjectCardProps {
   title: string;
@@ -54,7 +55,7 @@ const ProjectsSection = () => {
 
   return (
     <section className="py-12 sm:py-20">
-      <h2 className={`${inter.className} text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8 sm:mb-16`}>
+      <h2 className={`${syne.className} text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8 sm:mb-16`}>
         MY PROJECTS
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 sm:gap-y-16 gap-x-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
