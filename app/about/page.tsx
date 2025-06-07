@@ -4,37 +4,23 @@ import Image from "next/image";
 export default function AboutPage() {
   const timelineData = [
     {
-      title: "2024",
+      title: "Present",
       content: (
         <div className="space-y-6">
           <p className="text-neutral-700 dark:text-neutral-300">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+            Currently pursuing my masters in computer science at stevens institute of technology.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/timeline/aceternity-1.png"
-              alt="Aceternity UI Screenshot 1"
+              src="/stevens1.jpg"
+              alt="stevens1"
               width={400}
               height={300}
               className="rounded-lg border border-neutral-200 dark:border-neutral-800"
             />
             <Image
-              src="/timeline/aceternity-2.png"
-              alt="Aceternity UI Screenshot 2"
-              width={400}
-              height={300}
-              className="rounded-lg border border-neutral-200 dark:border-neutral-800"
-            />
-            <Image
-              src="/timeline/aceternity-3.png"
-              alt="Aceternity UI Screenshot 3"
-              width={400}
-              height={300}
-              className="rounded-lg border border-neutral-200 dark:border-neutral-800"
-            />
-            <Image
-              src="/timeline/aceternity-4.png"
-              alt="Aceternity UI Screenshot 4"
+              src="/stevens2.jpg"
+              alt="stevens2"
               width={400}
               height={300}
               className="rounded-lg border border-neutral-200 dark:border-neutral-800"
@@ -44,61 +30,88 @@ export default function AboutPage() {
       ),
     },
     {
-      title: "Early 2023",
+        title: "Jan 2025",
+        content: (
+          <div className="space-y-6">
+            <p className="text-neutral-700 dark:text-neutral-300">
+              Worked on a project called "TRAVIZ" which is a cost effective application for public transportation
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+             <Image
+                src="/Traviz1.jpg"
+                alt="Traviz1"
+                width={400}
+                height={300}
+                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+              />
+              <Image
+                src="/Traviz2.png"
+                alt="Traviz2"
+                width={400}
+                height={300}
+                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+              />
+            </div>
+          </div>
+        ),
+      },
+    {
+      title: "Early 2024",
       content: (
         <div className="space-y-6">
           <p className="text-neutral-700 dark:text-neutral-300">
-            I usually run out of copy, but when I see content this big, I try to integrate lorem ipsum.
+          In early 2024, I developed my university’s event website, VITOPIA, and also designed the user interface for its mobile application.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300">
-            Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.
+          It is a 2-day event that includes ticket booking, merchandise purchases, and browsing the various events throughout the day. The entire application handled over 15,000 users and generated more than ₹1.5 crore in revenue for the university.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/timeline/early-2023-1.png"
-              alt="Early 2023 Project 1"
+              src="/Vitopia1.png"
+              alt="Vitopia1"
               width={400}
               height={300}
               className="rounded-lg border border-neutral-200 dark:border-neutral-800"
             />
             <Image
-              src="/timeline/early-2023-2.png"
-              alt="Early 2023 Project 2"
+              src="/Vitopia2.jpg"
+              alt="Vitopia2"
               width={400}
               height={300}
               className="rounded-lg border border-neutral-200 dark:border-neutral-800"
             />
             <Image
-              src="/timeline/early-2023-3.png"
-              alt="Early 2023 Project 3"
+              src="/Vitopia3.jpg"
+              alt="Vitopia3"
               width={400}
               height={300}
               className="rounded-lg border border-neutral-200 dark:border-neutral-800"
             />
+
             <Image
-              src="/timeline/early-2023-4.png"
-              alt="Early 2023 Project 4"
+              src="/Vitopia4.png"
+              alt="Vitopia3"
               width={400}
               height={300}
               className="rounded-lg border border-neutral-200 dark:border-neutral-800"
-            />
+            /> 
           </div>
         </div>
       ),
     },
     {
-      title: "Changelog",
+      title: "In Between",
       content: (
         <div className="space-y-4">
           <p className="text-neutral-700 dark:text-neutral-300">
-            Deployed 5 new components on Aceternity today
+            Developed few projects during my bachelors.
           </p>
           <ul className="list-inside space-y-2 text-neutral-700 dark:text-neutral-300">
-            <li>✅ Card grid component</li>
-            <li>✅ Startup template Aceternity</li>
-            <li>✅ Random file upload lol</li>
-            <li>✅ Himesh Reshammiya Music CD</li>
-            <li>✅ Salman Bhai Fan Club opens</li>
+            <li>✅ Developed Skin cancer pprediction analysis as a capstone project.</li>
+            <li>✅ Completed an internship on cybersecurity (Cranes Varsity).</li>
+            <li>✅ Built a website on a fashion brand.</li>
+            <li>✅ Designed a User Interface for a mobile application about Tiger Reserve.</li>
+            <li>✅ Completed few certifications on AI and Machine Learning.</li>
           </ul>
         </div>
       ),
