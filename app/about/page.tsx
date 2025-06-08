@@ -116,7 +116,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <motion.div variants={fadeInUp}>
               <Image
-                src="/Vitopia1.png"
+                src="/Vitopia.png"
                 alt="Vitopia1"
                 width={400}
                 height={300}
