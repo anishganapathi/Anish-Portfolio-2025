@@ -76,7 +76,7 @@ const Nav: React.FC = () => {
           >
             <Link href="/" className="text-white/90 font-semibold flex items-center gap-2 transition-colors hover:text-white">
               <Image 
-                src="/Alogo.png" 
+                src="/LogoA.png" 
                 alt="Logo" 
                 width={28} 
                 height={28}
