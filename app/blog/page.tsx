@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 import { Syne } from 'next/font/google';
+import Image from 'next/image';
 
 const syne = Syne({ subsets: ['latin'] });
 
@@ -204,9 +205,11 @@ export default function BlogPage() {
                 className="w-full max-w-[800px] pointer-events-auto bg-background border rounded-xl overflow-hidden"
               >
                 <motion.div layoutId={`image-${active.id}-${id}`} className="relative">
-                  <img
+                  <Image
                     src={active.image}
                     alt={active.title}
+                    width={800}
+                    height={300}
                     className="w-full h-[300px] object-cover"
                   />
                   <motion.div
@@ -291,9 +294,11 @@ export default function BlogPage() {
             >
               <Card className="overflow-hidden hover:bg-accent/50 transition-colors">
                 <motion.div layoutId={`image-${post.id}-${id}`}>
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
+                    width={800}
+                    height={300}
                     className="h-48 w-full object-cover"
                   />
                 </motion.div>

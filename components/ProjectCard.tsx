@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import { PinContainer } from './ui/3d-pin';
-import { Inter, Syne } from 'next/font/google';
+import { Syne } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
 const syne = Syne({ subsets: ['latin'] });
 
 interface ProjectCardProps {

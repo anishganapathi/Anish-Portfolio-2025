@@ -75,7 +75,7 @@ export default function AboutPage() {
           className="space-y-6"
         >
           <p className="text-neutral-700 dark:text-neutral-300">
-            Worked on a project called "TRAVIZ" which is a cost effective application for public transportation
+            Worked on a project called &quot;TRAVIZ&quot; which is a cost effective application for public transportation
           </p>
           <div className="grid grid-cols-2 gap-4">
             <motion.div variants={fadeInUp}>
@@ -108,7 +108,7 @@ export default function AboutPage() {
           className="space-y-6"
         >
           <p className="text-neutral-700 dark:text-neutral-300">
-          In early 2024, I developed my university's event website, VITOPIA, and also designed the user interface for its mobile application.
+          In early 2024, I developed my university&apos;s event website, VITOPIA, and also designed the user interface for its mobile application.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300">
           It is a 2-day event that includes ticket booking, merchandise purchases, and browsing the various events throughout the day. The entire application handled over 15,000 users and generated more than ₹1.5 crore in revenue for the university.

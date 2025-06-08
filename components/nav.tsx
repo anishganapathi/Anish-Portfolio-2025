@@ -4,12 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Inter, Syne, Outfit } from 'next/font/google';
+import { Inter, Syne } from 'next/font/google';
 import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 const syne = Syne({ subsets: ['latin'] });
-const outfit = Outfit({ subsets: ['latin'] });
 
 const Nav: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
