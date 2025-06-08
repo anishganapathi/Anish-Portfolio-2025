@@ -40,7 +40,7 @@ const demoData = {
       label: "SKIN DISEASE DIAGNOSIS",
       author: "Anish",
       published: "11 Dec 2024",
-      image: "Skin.jpg",
+      image: "/Skin.jpg",
     },
     {
       id: "post-3",
@@ -53,7 +53,7 @@ const demoData = {
       label: "TRAVIZ",
       author: "Anish",
       published: "19 May 2025",
-      image: "Traviz.png",
+      image: "/Traviz.png",
     },
   ],
 };
