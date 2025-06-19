@@ -83,7 +83,7 @@ const contacts: Contact[] = [
     name: "Skin Disease Diagnosis",
     subtitle: "GUI based application",
     type: "project",
-    avatar: "/avatars/Project.png",
+    avatar: "/avatars/Github.png",
     href: "https://github.com/anishganapathi/Skin-Disease-Diagnosis",
   },
   {

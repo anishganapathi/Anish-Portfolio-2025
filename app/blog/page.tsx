@@ -194,7 +194,7 @@ export default function BlogPage() {
 
         <AnimatePresence mode="wait">
           {active && (
-            <div className="fixed inset-0 grid place-items-center z-[60] pointer-events-none p-4">
+            <div className="fixed inset-0 flex items-center justify-center z-[60] pointer-events-none px-4 py-8 overflow-y-auto">
               <motion.div
                 layoutId={`card-${active.id}-${id}`}
                 ref={ref}
@@ -202,7 +202,7 @@ export default function BlogPage() {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="w-full max-w-[800px] pointer-events-auto bg-background border rounded-xl overflow-hidden"
+                className="w-full md:max-w-[800px] pointer-events-auto bg-background border rounded-xl overflow-hidden min-w-0"
               >
                 <motion.div layoutId={`image-${active.id}-${id}`} className="relative">
                   <Image
@@ -210,7 +210,7 @@ export default function BlogPage() {
                     alt={active.title}
                     width={800}
                     height={300}
-                    className="w-full h-[300px] object-cover"
+                    className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover"
                   />
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -229,26 +229,26 @@ export default function BlogPage() {
                 </motion.div>
 
                 <motion.div 
-                  className="p-6"
+                  className="px-4 py-6 md:p-6"
                   variants={contentVariants}
                   initial="initial"
                   animate="animate"
                 >
                   <div className="flex justify-between items-start mb-4">
-                    <div>
+                    <div className="min-w-0 pr-4">
                       <motion.div layoutId={`badge-${active.id}-${id}`}>
-                        <Badge variant="secondary">{active.label}</Badge>
+                        <Badge variant="secondary" className="break-words">{active.label}</Badge>
                       </motion.div>
                       <motion.h2
                         layoutId={`title-${active.id}-${id}`}
-                        className="text-2xl font-bold mt-2"
+                        className="text-2xl font-bold mt-2 break-words overflow-hidden"
                       >
                         {active.title}
                       </motion.h2>
                     </div>
                     <motion.p
                       layoutId={`date-${active.id}-${id}`}
-                      className="text-sm text-muted-foreground"
+                      className="text-sm text-gray-400"
                     >
                       {active.published}
                     </motion.p>
@@ -256,10 +256,10 @@ export default function BlogPage() {
 
                   <motion.div
                     variants={contentVariants}
-                    className="prose prose-invert max-w-none"
+                    className="prose prose-invert max-w-full mt-6 overflow-x-hidden"
                   >
                     {active.content.split('\n').map((paragraph, index) => (
-                      <p key={index} className="text-muted-foreground whitespace-pre-line">
+                      <p key={index} className="text-gray-300 break-all">
                         {paragraph}
                       </p>
                     ))}
@@ -272,6 +272,17 @@ export default function BlogPage() {
                     Written by {active.author}
                   </motion.p>
                 </motion.div>
+
+                <CardFooter className="p-6 pt-4 flex justify-end gap-2">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="bg-background/80 backdrop-blur-sm hover:bg-background/90"
+                    onClick={() => setActive(null)}
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                </CardFooter>
               </motion.div>
             </div>
           )}
