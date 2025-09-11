@@ -165,7 +165,7 @@ export default function BlogPage() {
   }, [active]);
 
   return (
-    <main className="min-h-screen w-full py-32 px-4 md:px-6">
+    <main className="min-h-screen w-full py-32 px-4 md:px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           className="text-center mb-16"
