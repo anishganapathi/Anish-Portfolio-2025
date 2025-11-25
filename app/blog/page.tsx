@@ -61,7 +61,7 @@ const demoData = {
 // Animation variants
 const overlayVariants = {
   closed: { opacity: 0 },
-  open: { 
+  open: {
     opacity: 1,
     transition: {
       ease: [0.22, 1, 0.36, 1],
@@ -104,12 +104,12 @@ const cardVariants = {
 };
 
 const expandedCardVariants = {
-  initial: { 
+  initial: {
     opacity: 0,
     scale: 0.95,
     y: 20
   },
-  animate: { 
+  animate: {
     opacity: 1,
     scale: 1,
     y: 0,
@@ -118,7 +118,7 @@ const expandedCardVariants = {
       duration: 0.5
     }
   },
-  exit: { 
+  exit: {
     opacity: 0,
     scale: 0.95,
     y: -20,
@@ -131,7 +131,7 @@ const expandedCardVariants = {
 
 const contentVariants = {
   initial: { opacity: 0, y: 10 },
-  animate: { 
+  animate: {
     opacity: 1,
     y: 0,
     transition: {
@@ -167,7 +167,7 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen w-full py-32 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -194,7 +194,7 @@ export default function BlogPage() {
 
         <AnimatePresence mode="wait">
           {active && (
-            <div className="fixed inset-0 flex items-center justify-center z-[60] pointer-events-none px-4 py-8 overflow-y-auto">
+            <div className="fixed inset-0 flex items-start justify-center z-[60] pointer-events-none px-4 pt-8 pb-8 overflow-y-auto">
               <motion.div
                 layoutId={`card-${active.id}-${id}`}
                 ref={ref}
@@ -212,24 +212,30 @@ export default function BlogPage() {
                     height={300}
                     className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover"
                   />
-                  <motion.div
+                  <motion.button
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.2 }}
+                    whileHover={{
+                      scale: 1.1,
+                      rotate: 90,
+                      backgroundColor: "rgba(255, 255, 255, 0.15)"
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{
+                      delay: 0.2,
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20
+                    }}
+                    className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm rounded-md p-2 cursor-pointer hover:bg-background/90 transition-colors"
+                    onClick={() => setActive(null)}
                   >
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm hover:bg-background/90"
-                      onClick={() => setActive(null)}
-                    >
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </motion.div>
+                    <X className="h-4 w-4" />
+                  </motion.button>
                 </motion.div>
 
-                <motion.div 
-                  className="px-4 py-6 md:p-6"
+                <motion.div
+                  className="px-4 py-4 md:px-6 md:py-4"
                   variants={contentVariants}
                   initial="initial"
                   animate="animate"
@@ -256,7 +262,7 @@ export default function BlogPage() {
 
                   <motion.div
                     variants={contentVariants}
-                    className="prose prose-invert max-w-full mt-6 overflow-x-hidden"
+                    className="prose prose-invert max-w-full mt-4 overflow-x-hidden"
                   >
                     {active.content.split('\n').map((paragraph, index) => (
                       <p key={index} className="text-gray-300 break-all">
@@ -267,22 +273,11 @@ export default function BlogPage() {
 
                   <motion.p
                     layoutId={`author-${active.id}-${id}`}
-                    className="mt-6 text-sm text-muted-foreground"
+                    className="mt-4 text-sm text-muted-foreground text-right"
                   >
                     Written by {active.author}
                   </motion.p>
                 </motion.div>
-
-                <CardFooter className="p-6 pt-4 flex justify-end gap-2">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="bg-background/80 backdrop-blur-sm hover:bg-background/90"
-                    onClick={() => setActive(null)}
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
-                </CardFooter>
               </motion.div>
             </div>
           )}
