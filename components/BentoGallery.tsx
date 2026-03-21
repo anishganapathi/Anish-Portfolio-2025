@@ -30,37 +30,37 @@ const mediaItems: MediaItemType[] = [
   {
     id: 2,
     type: "image",
-    title: "Vitopia Festival",
-    desc: "International cultural & sports event website — VITopia 2024.",
-    url: "/Vitopia.png",
+    title: "Stevens Hackathon Winner",
+    desc: "Won the Stevens QuackHacks 2026 hackathon for best use for Gemini API.",
+    url: "/hackwinner.jpg",
   },
   {
     id: 3,
     type: "image",
-    title: "Skin Cancer Detection",
-    desc: "CNN-based malignancy classifier built in MATLAB.",
-    url: "/Skin.jpg",
+    title: "Blipod Presentation",
+    desc: "Presented Blipod at Code & Coffee in New York.",
+    url: "/chinatown.jpeg",
   },
   {
     id: 4,
     type: "image",
-    title: "Traviz App",
-    desc: "Mobile-first AI transit planning experience.",
-    url: "/Traviz1.jpg",
+    title: "Yelp AI",
+    desc: "One of the finest project submissions for Yelp AI Hackathon 2025.",
+    url: "/Thumbnail.png",
   },
   {
     id: 5,
     type: "image",
-    title: "Vitopia Moments",
-    desc: "Behind the scenes of VITopia 2024.",
-    url: "/Vitopia2.jpg",
+    title: "Vitopia Festival",
+    desc: "International cultural & sports event website VITopia 2024.",
+    url: "/Vitopia.png",
   },
   {
     id: 6,
     type: "image",
-    title: "Stevens Campus",
-    desc: "Graduate life at Stevens Institute of Technology.",
-    url: "/stevens1.jpg",
+    title: "Life at Stevens",
+    desc: "My 1st year at Stevens Institute of Technology.",
+    url: "/1styear.png",
   },
 ];
 
@@ -375,13 +375,13 @@ const BentoGallery: React.FC = () => {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className={`${inter.className} text-[11px] tracking-[0.3em] uppercase text-white/30 mb-3`}>
-            A glimpse of my work
+            A glimpse of my world
           </p>
           <h2 className={`${syne.className} text-3xl sm:text-4xl md:text-[52px] font-bold text-white leading-none`}>
             Gallery
           </h2>
           <p className={`${inter.className} mt-4 text-sm text-white/35 max-w-xs mx-auto leading-relaxed`}>
-            Click any tile to explore in full
+            Click any tile to explore
           </p>
         </motion.div>
 
