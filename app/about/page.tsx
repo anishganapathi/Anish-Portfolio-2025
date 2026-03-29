@@ -37,7 +37,7 @@ export default function AboutPage() {
     {
       title: "Present",
       content: (
-        <motion.div 
+        <motion.div
           variants={fadeInUp}
           className="space-y-6"
         >
@@ -70,7 +70,7 @@ export default function AboutPage() {
     {
       title: "Jan 2025",
       content: (
-        <motion.div 
+        <motion.div
           variants={fadeInUp}
           className="space-y-6"
         >
@@ -103,15 +103,15 @@ export default function AboutPage() {
     {
       title: "Early 2024",
       content: (
-        <motion.div 
+        <motion.div
           variants={fadeInUp}
           className="space-y-6"
         >
           <p className="text-neutral-700 dark:text-neutral-300">
-          In early 2024, I developed my university&apos;s event website, VITOPIA, and also designed the user interface for its mobile application.
+            In early 2024, I developed my university&apos;s event website, VITOPIA, and also designed the user interface for its mobile application.
           </p>
           <p className="text-neutral-700 dark:text-neutral-300">
-          It is a 2-day event that includes ticket booking, merchandise purchases, and browsing the various events throughout the day. The entire application handled over 15,000 users and generated more than ₹1.5 crore in revenue for the university.
+            It is a 2-day event that includes ticket booking, merchandise purchases, and browsing the various events throughout the day. The entire application handled over 15,000 users and generated more than ₹1.5 crore in revenue for the university.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <motion.div variants={fadeInUp}>
@@ -154,45 +154,10 @@ export default function AboutPage() {
         </motion.div>
       ),
     },
-    {
-      title: "In Between",
-      content: (
-        <motion.div 
-          variants={fadeInUp}
-          className="space-y-4"
-        >
-          <p className="text-neutral-700 dark:text-neutral-300">
-            Developed few projects during my bachelors.
-          </p>
-          <motion.ul 
-            variants={containerVariants}
-            initial="initial"
-            animate="animate"
-            className="list-inside space-y-2 text-neutral-700 dark:text-neutral-300"
-          >
-            {[
-              "✅ Developed Skin cancer prediction analysis as a capstone project.",
-              "✅ Completed an internship on cybersecurity (Cranes Varsity).",
-              "✅ Built a website on a fashion brand.",
-              "✅ Designed a User Interface for a mobile application about Tiger Reserve.",
-              "✅ Completed few certifications on AI and Machine Learning."
-            ].map((item, index) => (
-              <motion.li 
-                key={index}
-                variants={fadeInUp}
-                className="flex items-center"
-              >
-                {item}
-              </motion.li>
-            ))}
-          </motion.ul>
-        </motion.div>
-      ),
-    },
   ];
 
   return (
-    <motion.main 
+    <motion.main
       initial="initial"
       animate="animate"
       variants={containerVariants}
