@@ -35,15 +35,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 0%", "end 95%"], // Extend scroll range
+    offset: ["start 10%", "end 25%"],
   });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 0.95], [0, height]);
-  const opacityTransform = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.95, 1],
-    [0, 1, 1, 0]
-  );
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
     <div
@@ -55,7 +51,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Journey Highlights and updates
         </h2>
         <p className={`${inter.className} text-neutral-700 dark:text-neutral-300 text-base md:text-lg max-w-2xl leading-relaxed font-light`}>
-          Currently I&apos;ve been enrolled to stevens institute of technology for my masters in computer science. 
+          Currently I&apos;ve been enrolled to stevens institute of technology for my masters in computer science.
         </p>
       </div>
 
