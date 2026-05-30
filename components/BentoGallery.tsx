@@ -10,20 +10,6 @@ const syne = Syne({ subsets: ["latin"] });
 
 type MediaItemType = GalleryMediaItem;
 
-// ─── Bento grid layout (4 columns × 3 rows) ──────────────────────────────────
-//
-//   Col:  1        2        3        4
-//   ┌─────────────────────┬─────────────────────┐  Row 1 (240px)
-//   │    item 1           │    item 2            │
-//   │    (2col × 2row)    │    (2col × 1row)     │
-//   │                     ├──────────┬───────────┤  Row 2 (190px)
-//   │    item 1 cont.     │  item 3  │  item 4   │
-//   ├─────────────────────┴──────────┴───────────┤
-//   │   item 5  (2col × 1row)  │  item 6 (2col)  │  Row 3 (160px)
-//   └──────────────────────────┴─────────────────┘
-//
-// 12 grid units total — all filled, zero gaps, zero overlaps.
-//
 const CELL_STYLES: React.CSSProperties[] = [
   { gridColumn: "1 / 3", gridRow: "1 / 3" }, // item1 — big square hero
   { gridColumn: "3 / 5", gridRow: "1 / 2" }, // item2 — wide landscape top-right

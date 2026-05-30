@@ -79,6 +79,27 @@
   }
 }
 
+/* Custom cursor — hide macOS / system pointer on desktop */
+html.custom-cursor-active,
+html.custom-cursor-active body,
+html.custom-cursor-active *:not(.custom-cursor-root):not(.custom-cursor-root *),
+html.custom-cursor-active *::before,
+html.custom-cursor-active *::after {
+  cursor: none !important;
+}
+
+html.custom-cursor-active iframe,
+html.custom-cursor-active canvas,
+html.custom-cursor-active video {
+  cursor: none !important;
+}
+
+html.custom-cursor-active .custom-cursor-ring > div {
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.08),
+    inset 0 0 4px rgba(255, 255, 255, 0.04);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

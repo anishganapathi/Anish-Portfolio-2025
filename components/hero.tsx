@@ -74,10 +74,10 @@ export function Hero() {
           </div>
 
           {/* Right content */}
-          <div className="flex-1 relative h-[350px] sm:h-[450px] lg:h-full">
-            <SplineScene 
+          <div className="flex-1 relative h-[350px] sm:h-[450px] lg:h-full pointer-events-none">
+            <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
+              className="w-full h-full pointer-events-none"
             />
           </div>
         </div>
