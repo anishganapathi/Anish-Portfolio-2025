@@ -7,7 +7,6 @@ import ProjectsSection from "@/components/ProjectCard";
 export default function Home() {
   return (
     <div className="bg-black">
-   
       <Hero />
       <BentoGallery />
       <AboutScroll />

@@ -164,7 +164,7 @@ export default function BlogPage() {
   }, [active]);
 
   return (
-    <main className="min-h-screen w-full py-32 px-4 md:px-6">
+    <main className="min-h-screen w-full py-32 px-4 md:px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -201,7 +201,7 @@ export default function BlogPage() {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="w-full md:max-w-[800px] pointer-events-auto bg-background border rounded-xl overflow-hidden min-w-0"
+                className="w-full md:max-w-[800px] pointer-events-auto bg-[#111111] border border-neutral-800 rounded-xl overflow-hidden min-w-0"
               >
                 <motion.div layoutId={`image-${active.id}-${id}`} className="relative">
                   <Image
@@ -297,7 +297,7 @@ export default function BlogPage() {
               variants={cardVariants}
               whileHover="hover"
             >
-              <Card className="overflow-hidden hover:bg-accent/50 transition-colors">
+              <Card className="overflow-hidden border-neutral-800 bg-[#111111] hover:bg-[#1a1a1a] transition-colors">
                 <motion.div layoutId={`image-${post.id}-${id}`}>
                   <Image
                     src={post.image}

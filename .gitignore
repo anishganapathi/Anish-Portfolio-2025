@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Generated optimized assets (manifest in content/ is committed)
+/public/optimized/

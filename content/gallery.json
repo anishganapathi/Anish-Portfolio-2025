@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "group": "gallery",
+    "type": "image",
+    "title": "JoyConf",
+    "desc": "Attended Storyblok's JoyConf 2025 as Hackathon Winner.",
+    "original": "/joyconf.png"
+  },
+  {
+    "id": 2,
+    "group": "gallery",
+    "type": "image",
+    "title": "Stevens Hackathon Winner",
+    "desc": "Won the Stevens QuackHacks 2026 hackathon for best use for Gemini API.",
+    "original": "/hackwinner.jpg"
+  },
+  {
+    "id": 3,
+    "group": "gallery",
+    "type": "image",
+    "title": "Blipod Presentation",
+    "desc": "Presented Blipod at Code & Coffee in New York.",
+    "original": "/chinatown.jpeg"
+  },
+  {
+    "id": 4,
+    "group": "gallery",
+    "type": "image",
+    "title": "Yelp AI",
+    "desc": "One of the finest project submissions for Yelp AI Hackathon 2025.",
+    "original": "/Thumbnail.png"
+  },
+  {
+    "id": 5,
+    "group": "gallery",
+    "type": "image",
+    "title": "Vitopia Festival",
+    "desc": "International cultural & sports event website VITopia 2024.",
+    "original": "/Vitopia.png"
+  },
+  {
+    "id": 6,
+    "group": "gallery",
+    "type": "image",
+    "title": "Life at Stevens",
+    "desc": "My 1st year at Stevens Institute of Technology.",
+    "original": "/1styear.png"
+  }
+]

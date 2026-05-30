@@ -26,7 +26,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-[#8F8F8F] text-sm text-center sm:text-left">
-            Copyright 2025 © Anish Ganapathi
+            Copyright 2026 © Anish Ganapathi
           </p>
 
           {/* Social Links */}

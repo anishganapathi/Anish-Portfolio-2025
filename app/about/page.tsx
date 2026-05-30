@@ -41,7 +41,7 @@ export default function AboutPage() {
           variants={fadeInUp}
           className="space-y-6"
         >
-          <p className="text-neutral-700 dark:text-neutral-300">
+          <p className="text-neutral-300">
             Currently pursuing my masters in computer science at stevens institute of technology.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 alt="stevens1"
                 width={400}
                 height={300}
-                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+                className="rounded-lg border border-neutral-800"
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -60,7 +60,7 @@ export default function AboutPage() {
                 alt="stevens2"
                 width={400}
                 height={300}
-                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+                className="rounded-lg border border-neutral-800"
               />
             </motion.div>
           </div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
           variants={fadeInUp}
           className="space-y-6"
         >
-          <p className="text-neutral-700 dark:text-neutral-300">
+          <p className="text-neutral-300">
             Worked on a project called &quot;TRAVIZ&quot; which is a cost effective application for public transportation
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -84,7 +84,7 @@ export default function AboutPage() {
                 alt="Traviz1"
                 width={400}
                 height={300}
-                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+                className="rounded-lg border border-neutral-800"
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -93,7 +93,7 @@ export default function AboutPage() {
                 alt="Traviz2"
                 width={400}
                 height={300}
-                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+                className="rounded-lg border border-neutral-800"
               />
             </motion.div>
           </div>
@@ -107,10 +107,10 @@ export default function AboutPage() {
           variants={fadeInUp}
           className="space-y-6"
         >
-          <p className="text-neutral-700 dark:text-neutral-300">
+          <p className="text-neutral-300">
             In early 2024, I developed my university&apos;s event website, VITOPIA, and also designed the user interface for its mobile application.
           </p>
-          <p className="text-neutral-700 dark:text-neutral-300">
+          <p className="text-neutral-300">
             It is a 2-day event that includes ticket booking, merchandise purchases, and browsing the various events throughout the day. The entire application handled over 15,000 users and generated more than ₹1.5 crore in revenue for the university.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 alt="Vitopia1"
                 width={400}
                 height={300}
-                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+                className="rounded-lg border border-neutral-800"
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 alt="Vitopia2"
                 width={400}
                 height={300}
-                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+                className="rounded-lg border border-neutral-800"
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 alt="Vitopia3"
                 width={400}
                 height={300}
-                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+                className="rounded-lg border border-neutral-800"
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 alt="Vitopia3"
                 width={400}
                 height={300}
-                className="rounded-lg border border-neutral-200 dark:border-neutral-800"
+                className="rounded-lg border border-neutral-800"
               />
             </motion.div>
           </div>
@@ -161,7 +161,7 @@ export default function AboutPage() {
       initial="initial"
       animate="animate"
       variants={containerVariants}
-      className="min-h-screen bg-white dark:bg-neutral-950"
+      className="min-h-screen bg-black"
     >
       <Timeline data={timelineData} />
     </motion.main>

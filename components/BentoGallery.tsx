@@ -3,66 +3,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn } from "lucide-react";
 import { Inter, Syne } from "next/font/google";
+import { useGalleryImages, type GalleryMediaItem } from "@/hooks/useGalleryImages";
 
 const inter = Inter({ subsets: ["latin"] });
 const syne = Syne({ subsets: ["latin"] });
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-interface MediaItemType {
-  id: number;
-  type: "image" | "video";
-  title: string;
-  desc: string;
-  url: string;
-}
-
-// ─── Portfolio items ──────────────────────────────────────────────────────────
-
-const mediaItems: MediaItemType[] = [
-  {
-    id: 1,
-    type: "image",
-    title: "JoyConf",
-    desc: "Attended Storyblok's JoyConf 2025 as Hackathon Winner.",
-    url: "/joyconf.png",
-  },
-  {
-    id: 2,
-    type: "image",
-    title: "Stevens Hackathon Winner",
-    desc: "Won the Stevens QuackHacks 2026 hackathon for best use for Gemini API.",
-    url: "/hackwinner.jpg",
-  },
-  {
-    id: 3,
-    type: "image",
-    title: "Blipod Presentation",
-    desc: "Presented Blipod at Code & Coffee in New York.",
-    url: "/chinatown.jpeg",
-  },
-  {
-    id: 4,
-    type: "image",
-    title: "Yelp AI",
-    desc: "One of the finest project submissions for Yelp AI Hackathon 2025.",
-    url: "/Thumbnail.png",
-  },
-  {
-    id: 5,
-    type: "image",
-    title: "Vitopia Festival",
-    desc: "International cultural & sports event website VITopia 2024.",
-    url: "/Vitopia.png",
-  },
-  {
-    id: 6,
-    type: "image",
-    title: "Life at Stevens",
-    desc: "My 1st year at Stevens Institute of Technology.",
-    url: "/1styear.png",
-  },
-];
+type MediaItemType = GalleryMediaItem;
 
 // ─── Bento grid layout (4 columns × 3 rows) ──────────────────────────────────
 //
@@ -353,6 +299,7 @@ const BentoCell = ({
 
 const BentoGallery: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<MediaItemType | null>(null);
+  const { items: mediaItems, loading, error } = useGalleryImages();
 
   return (
     <section className="relative bg-[#0a0a0a] py-20 sm:py-28 overflow-hidden">
@@ -394,6 +341,17 @@ const BentoGallery: React.FC = () => {
           Row 3 (160px): item5[2col] | item6[2col]
           ══════════════════════════════════════════
         */}
+        {loading && (
+          <div className={`${inter.className} text-center text-white/30 text-sm py-24`}>
+            Loading gallery…
+          </div>
+        )}
+        {error && !loading && (
+          <p className={`${inter.className} text-center text-red-400/80 text-sm py-12`}>
+            {error}. Run <code className="text-white/50">npm run images:generate</code> before build.
+          </p>
+        )}
+        {!loading && !error && mediaItems.length > 0 && (
         <motion.div
           className="grid gap-3"
           style={{
@@ -412,6 +370,7 @@ const BentoGallery: React.FC = () => {
             <BentoCell key={item.id} item={item} index={index} onSelect={setSelectedItem} />
           ))}
         </motion.div>
+        )}
       </div>
 
       {/* Modal */}

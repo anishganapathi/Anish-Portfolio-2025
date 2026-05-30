@@ -205,7 +205,7 @@ const Nav: React.FC = () => {
                     href="/contact"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <button className={`${inter.className} w-full flex items-center justify-center rounded-full ${pathname === '/contact' ? 'bg-gray-100 text-black' : 'bg-white text-black'} px-6 py-2.5 text-sm font-semibold hover:bg-gray-100 transition-colors hover:cursor-pointer`}>
+                    <button className={`${inter.className} w-full flex items-center justify-center rounded-full bg-white/[0.08] border border-white/[0.12] text-white px-6 py-2.5 text-sm font-semibold hover:bg-white/[0.14] transition-colors hover:cursor-pointer`}>
                       Contact
                     </button>
                   </Link>
